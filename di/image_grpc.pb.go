@@ -4,7 +4,7 @@
 // - protoc             v3.21.9
 // source: PATH/image.proto
 
-package dil
+package di
 
 import (
 	context "context"

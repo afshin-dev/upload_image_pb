@@ -1,7 +1,7 @@
 syntax = "proto3" ;
 
 package upload_image ;
-option  go_package = "./dil" ;
+option  go_package = "./di" ;
 
 message ImageRequest {
   bytes image_chunk = 1 ;
