@@ -1,0 +1,21 @@
+syntax = "proto3" ;
+
+package upload_image ;
+option  go_package = "./dil" ;
+
+message ImageRequest {
+  bytes image_chunk = 1 ;
+  optional bool done = 2 ;
+}
+
+message ImageResponse {
+  string uid = 1 ;
+  bool  ok = 2 ;
+  optional string error = 3 ;
+}
+
+service ImageStore {
+  rpc upload(stream ImageRequest) returns (ImageResponse) {} ;
+}
+
+
